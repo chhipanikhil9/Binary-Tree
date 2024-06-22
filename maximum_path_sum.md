@@ -1,5 +1,7 @@
+* here i stuck at the point where i thought the path can be curve+linear but no it is not either it is curve or it is linear
+* both will not work see the images so at every node we will return the just leniar one but for global maxi we will take the max of
+* curve and curve one(l+r+root->val)
 ```
-// here i stuck at the point where i thought the path can be curve+linear but no it is not either it is curve or it is linear both will not work see the images
 int dfs(TreeNode* root, int &maxi){
   if(root==NULL) return 0;
   int l = dfs(root->left,maxi);
