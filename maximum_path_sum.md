@@ -17,6 +17,6 @@ int maxPathSum(TreeNode* root) {
 }
 ```
 
-![mps_wrong1](mps_wrong1.png)
+![mps_wrong](mps_wrong.png)
 ![mps_right_curve](mps_right_curve.png)
 ![mps_right_linear](mps_right_linear.png)
