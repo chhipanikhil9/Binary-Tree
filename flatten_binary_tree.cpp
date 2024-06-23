@@ -1,6 +1,6 @@
 // 1. Using stack push right first and left second so left will process first and right after that
 // time: O(N)
-// space: O(N)
+// space: O(LogN)
 void flatten(TreeNode* root){
   stack<TreeNode*> st;
   st.push(root);
@@ -9,8 +9,8 @@ void flatten(TreeNode* root){
     st.pop();
     if(temp->right) st.push(temp->right);
     if(temp->left) st.push(temp->left);
-    root->right = temp;
-    root->left = NULL;
+    if(!st.empty()) temp->right = st.top();
+    temp->left = NULL;
   }
 }
 
